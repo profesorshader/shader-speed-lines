@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bwx7gme20dv8k"]
+
+[ext_resource type="Material" uid="uid://ctil1u3tni0nb" path="res://materials/grid.tres" id="1_o2udv"]
+[ext_resource type="PackedScene" uid="uid://bqeqjeb1ga1fg" path="res://prefabs/light.tscn" id="2_4gblw"]
+[ext_resource type="Material" uid="uid://cy3vtps8vq0m8" path="res://materials/example03.tres" id="2_itjev"]
+[ext_resource type="Script" uid="uid://c2x2htrdt4a0w" path="res://scripts/camera.gd" id="3_drcpm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6taee"]
+flip_faces = true
+size = Vector3(1, 1, 100)
+
+[sub_resource type="Environment" id="Environment_6taee"]
+ambient_light_source = 2
+fog_enabled = true
+fog_light_color = Color(0, 0, 0.1254902, 1)
+fog_density = 0.1
+volumetric_fog_albedo = Color(0, 0, 1, 1)
+
+[node name="Node3D" type="Node3D" unique_id=1815422]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=36356928]
+material_override = ExtResource("1_o2udv")
+mesh = SubResource("BoxMesh_6taee")
+
+[node name="OmniLight1" parent="." unique_id=2017728889 instance=ExtResource("2_4gblw")]
+
+[node name="OmniLight2" parent="." unique_id=305928835 instance=ExtResource("2_4gblw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="OmniLight3" parent="." unique_id=1842485428 instance=ExtResource("2_4gblw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1982337653]
+environment = SubResource("Environment_6taee")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=334892578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+script = ExtResource("3_drcpm")
+
+[node name="Postpo" type="CanvasLayer" parent="." unique_id=1725190699]
+
+[node name="ColorRect" type="ColorRect" parent="Postpo" unique_id=703333622]
+material = ExtResource("2_itjev")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

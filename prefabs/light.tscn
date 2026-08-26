@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bqeqjeb1ga1fg"]
+
+[node name="OmniLight1" type="OmniLight3D" unique_id=2017728889]
+light_color = Color(0.5689727, 0.56897277, 0.5689727, 1)
+omni_range = 15.0
+omni_attenuation = 0.2

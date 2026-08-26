@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://oaxfjo1vcsiw"]
+
+[ext_resource type="Texture2D" uid="uid://bs5ixprx0mk75" path="res://textures/ninja01.png" id="1_vwq7m"]
+[ext_resource type="Material" uid="uid://dj6is2fmxsjff" path="res://materials/example01.tres" id="2_r4u2r"]
+
+[node name="Root" type="Node2D" unique_id=1837234002]
+
+[node name="Image" type="CanvasLayer" parent="." unique_id=1805885333]
+
+[node name="TextureRect" type="TextureRect" parent="Image" unique_id=2026841026]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vwq7m")
+
+[node name="Postpo" type="CanvasLayer" parent="." unique_id=1979211196]
+
+[node name="ColorRect" type="ColorRect" parent="Postpo" unique_id=1105248802]
+material = ExtResource("2_r4u2r")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
