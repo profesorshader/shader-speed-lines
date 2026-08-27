@@ -64,7 +64,7 @@ void fragment() {
 	
 #if USE_RADIAL_MODE	
 	// compute distortion direction
-	vec2 dir = -(UV - vec2(0.5));
+	vec2 dir = -(UV - radial_center);
 	// compute noise UVs
 	vec2 src_uv = polar_coordinates(vec2(UV.x, UV.y), radial_center, radial_zoom, radial_repeat, tv);	
 #else
